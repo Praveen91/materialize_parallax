@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Parallax theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for Page templates.
+ *
+ * Override or insert variablesr into the page template.
+ */
+function parallax_preprocess_page(&$variables) {
+ $variables['banner_head'] = theme_get_setting('banner_head', 'parallax');
+ $variables['banner_desc'] = check_markup(theme_get_setting('banner_desc', 'parallax'), 'full_html');
+ $variables['banner_button_label'] = theme_get_setting('banner_button_label', 'parallax');
+ $variables['banner_url'] = theme_get_setting('banner_url', 'parallax');
+}

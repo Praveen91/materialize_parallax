@@ -1,0 +1,7 @@
+name: Parallax
+description: Materialize beased parallax theme.
+core: 8.x
+type: theme
+
+libraries:
+  - parallax/parallax-style

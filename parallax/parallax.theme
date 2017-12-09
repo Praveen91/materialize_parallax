@@ -15,4 +15,9 @@ function parallax_preprocess_page(&$variables) {
  $variables['banner_desc'] = check_markup(theme_get_setting('banner_desc', 'parallax'), 'full_html');
  $variables['banner_button_label'] = theme_get_setting('banner_button_label', 'parallax');
  $variables['banner_url'] = theme_get_setting('banner_url', 'parallax');
+
+  if ($variables['is_front']) {
+    $variables['#attached']['library'][] = 'parallax/parallax-style';
+  }
+
 }
